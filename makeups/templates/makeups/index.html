@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Makeup Store</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'products/style.css' %}">
+</head>
+<body>
+    <h1>Welcome to the Makeup Store</h1>
+    <h2>Products</h2>
+    <ul>
+        {% for product in products %}
+        <li>{{ product.name }} - ${{ product.price }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
